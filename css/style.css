@@ -5,8 +5,8 @@
 
 .banner-background {
   background: #000;
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
+  position: relative;
+  top: 0; right: 0; bottom: 0;  left: 0;
   z-index: -1;
   min-width: 200px;
   background-size: cover;
@@ -19,7 +19,7 @@
   top: 0; right: 0; bottom: 0; left: 0;
   z-index: -1;
   min-width: 200px;
-
+  width: 100%;
 
 }
 .video-foreground,
@@ -30,36 +30,28 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-
-   background: url('img/banner1.jpg') no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    overflow:hidden;
-    background-repeat: no-repeat;
-
 }
 #vidtop-content {
 	top: 0;
 	color: #fff;
   display: block;
+
 }
 .vid-info { 
-  position: fixed; 
+  position: absolute; 
   top: 0; 
   text-align: center;
   right: 0; 
   width: 100%; 
-  /*height: 450px;*/
   transform: translate(0,50%); 
   background: rgba(0,0,0,.5); 
   color: #fff; 
   padding: 1rem; 
   font-family: Avenir, Helvetica, sans-serif; 
 }
+
 .vid-info h1 
-{ 
+  { 
   font-family: 'Anton', sans-serif;
   font-size: 100px; 
   font-weight: 700; 
@@ -71,7 +63,7 @@
 
 .vid-info a { 
   display: inline; 
-  padding: 5px;
+ /* padding: 5px;*/
   color: #fff; 
   text-decoration: none; 
   background: rgba(0,0,0,.5); 
@@ -95,28 +87,9 @@ body {
 
 main {
   display: block;
-   overflow: hidden;
+  overflow-y: scroll;
 }
 
-footer {
-  line-height: 5em;
-  position: fixed;
-  bottom: 0;
-  padding: 0;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  background-color: #E8DB7D;
-}
-
-hr {
-  padding: 0;
-  margin-top; 0;
-}
-
-div {
-  margin-top: 1px;
-}
 
 .sidenav {
     height: 100%;
@@ -125,7 +98,7 @@ div {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #231123;
+    background-color: #191970;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -197,6 +170,7 @@ div {
   width: 100%;
   border-radius: 1px solid white;
   text-align: center;
+  margin-left: 10px;
 }
 
 .menu-text span{
@@ -275,19 +249,81 @@ div {
   width: 80px;
 }
 
+.snapshot {
+  position: absolute;
+  top: 380px;
+ 
+}
+
+
 .about {
-  background-color: white;
-  margin-top: 200px;
-  display: none;
+  display: inline;
+  top: 100%;
+  position: relative;
+  color: white;
+  margin-top: 50px;
+  text-align: center;
+  
+}
+
+.about h4 {
+  text-align: center;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 .about p {
-  display: inline;
+  display: table;
   margin-right: 20px;
 }
 
-.blog-section {
+.blog {
+  display: inline;
+  top: 100%;
+  position: relative;
+  color: white;
+  /*background-color: rgba(0,0,0,.5);*/
+  margin-top: 300px;
+  text-align: center;
+}
+
+.blog h4 {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.blog-subtitle {
+  font-size: 20px;
+}
+
+.project {
+ display: inline;
+  top: 100%;
+  position: relative;
+  color: white;
+  background-color: rgba(0,0,0,.5);
+  margin-top: 50px;
+  text-align: center;
+  
+}
+
+
+
+
+footer {
+  line-height: 1.5em;
+  position: fixed;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  background-color: #E8DB7D;
+  font-size: 15px;
   display: none;
+}
+
+footer .fa {
+  display: block;
+  width: 100%;
 }
 
 @media only screen and (min-width: 768px) 
@@ -295,6 +331,7 @@ div {
   .video-foreground { 
     height: 100%;   
      }
+
 }
 
 
@@ -302,7 +339,7 @@ div {
   and (max-width: 767) {
     
     .acronym {
-      display: none;
+     font-size: 15px;
     }
 
     .video-foreground {
@@ -342,9 +379,19 @@ div {
 @media only screen and (max-width: 500px) {
  
   body {
+    
     background-color: black;
   } 
- 
+    
+    main {
+    display: block;
+     overflow: auto;
+    }
+
+    footer {
+      display: fixed;
+    }
+
       .acronym {
       display: none; 
       }
@@ -353,10 +400,16 @@ div {
       display: none;
      } 
 
-    .vid-info {   
+     
+    .vid-info {  
+        position: absolute; 
         width: 100%; 
-        padding: .5rem;
-        transform: translate(0,0); 
+        padding: .5rem;       
+        top: 0%; 
+        transform: translate(0,-50);
+        background: rgba(0,0,0,0);
+        display: block;
+
       }
 
     .vid-info h1 { 
@@ -364,12 +417,8 @@ div {
       font-size: 55px; 
       }
 
-    .vid-info a { 
-      display: none; 
-      }
-
-    .vid-info p { 
-      display: none; 
+      .vid-info button { 
+      size: 
       }
 
       .info-title {
@@ -405,10 +454,26 @@ div {
       display: inline;
       clear: both;
       overflow: auto;
+      margin-top: 0;
     }
 
     .blog-section {
       display: inline;
+    }
+
+    .banner-background {
+      position: relative;
+      display: inline;
+      z-index: -99;
+      opacity: .5;
+    }
+
+    .btn-lg {
+   /* padding: 18px 28px;*/
+    font-size: 15px;
+    display: block;
+    margin: 0 auto;
+    /*border-radius: 8px;*/
     }
   
    }

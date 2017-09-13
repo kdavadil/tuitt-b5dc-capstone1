@@ -8,14 +8,14 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-	<title>About - Ken</title>
+  <title>About -Ken</title>
 
 <!-- declare BOOTSTRAP before style.css -->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
 
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/about.css">
 
 <link rel="icon" type="image/png" href="favicon.ico">
 
@@ -24,6 +24,7 @@
 <link href="https://fonts.googleapis.com/css?family=Anton|Josefin+Sans" rel="stylesheet"> 
 
 <link href="https://fonts.googleapis.com/css?family=Arvo|Permanent+Marker" rel="stylesheet">
+
 
 </head>
 <body>
@@ -40,29 +41,19 @@
       <div class="col-xs-6 col-md-5">
         <div class="social-media-top">
         <p>KEN DAVADILLA</p>
-        <a href="#" class="fa fa-facebook"></a>
+        <a href="https://www.facebook.com/Kedzo23" class="fa fa-facebook" target="_blank"></a>
         <a href="#" class="fa fa-linkedin"></a>
-        <a href="#" class="fa fa-github"></a></div>
+        <a href="https://github.com/kdavadil" target="_blank" class="fa fa-github"></a></div>
       </div>
-
 
   <div class="col-xs-3 col-md-4">
     <div class="menu-text">
-  <span onclick="openNav()">&#9776;<span class="acronym"> MENU</span></span>
+  <span class="glyphicon glyphicon-menu-hamburger" onclick="openNav()"><!-- &#9776;<span class="acronym"> MENU</span> --></span>
+   </div>
   </div>
-  </div>
-
  </div>
 </div>
 
-
-<!--  Youtube Video Embed Background -->
-<div class="video-background">
-    <div class="video-foreground">
-      <iframe src="
-https://www.youtube.com/embed/MUHh-byANOE?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1&loop=1&playlist=MUHh-byANOE" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
 
 <!-- Banner background source: https://i.pinimg.com/originals/a7/6d/6f/a76d6f1442b9f01796faa0859dbe9506.jpg-->
 
@@ -71,10 +62,11 @@ https://www.youtube.com/embed/MUHh-byANOE?rel=0&;controls=0&;showinfo=0;autoplay
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="project.html">Projects</a>
+  <a href="blog.html">Blogs</a>
+  <a href="contact.html">Contact</a>
   <div class="clear"></div>
   <div class="toprow-sidenav">
   <a href="#" class="fa fa-facebook"></a>
@@ -85,34 +77,80 @@ https://www.youtube.com/embed/MUHh-byANOE?rel=0&;controls=0&;showinfo=0;autoplay
 
 
 <!-- Banner Header -->
-
-
-<div class="container-fluid">
- <div class="row">
-  <div class="col-xs-3 col-md-2">
-    <h4>About</h4>
-    <img class="avatar1" src="img/avatar1.jpg">
-    </div>
-    <div class="col-xs-9 col-md-10">
+<main class="container-fluid">
+ 
+<div class="row">
+  <div class="col-xs-12 col-md-12">
+  <img class="about-img img-responsive" src="img/avatar2.jpg">
+   <h4>About Ken</h4>
+    <p><strong>"Lorem ipsum dolor sit amet, consectetur" </strong></p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div> 
- </div>  
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    .</p>
+ </div>
+</div>
+
+
+<!-- Carousel -->
+
+<div class="container">  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="img/3_skill.jpg" alt="Skils">
+        <div class="carousel-caption">
+        <h4>Passion: Coding</h4>
+        <p>UPITDC: My journey to coding began early..
+        </p>
+      </div>
+      </div>
+
+      <div class="item">
+        <img src="img/2_personal.jpg" alt="Goals">
+         <div class="carousel-caption">
+        <h4>Ball was Life</h4>
+        <p>but now, I'm like your usual uncle who talks about how good they where back in the day..  
+        </p>
+      </div>
+      </div>
+    
+      <div class="item">
+        <img src="img/1_personal.jpg" alt="Mentors">
+        <div class="carousel-caption">
+        <h4>Dancer Crew</h4>
+        <p> I Locked and Popped my way out of puberty.. 
+        </p>
+      </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>
 
 </main> <!-- End of Main -->
 
 <footer>
- <hr>
-<!--  <p>EMAIL : kenneth_davadilla@yahoo.com</p> 
- <p>PHONE: (046) 456-9637</p> 
- <p>CELL: +63 947892 9101</p>
- <p>WEB: kendavadilla.com</p>  -->
-
   <span>Copyright &copy; 2017 | KEN DAVADILLA</span>
 </footer>
 
@@ -139,9 +177,8 @@ function closeNav() {
     document.getElementById("main").style.marginLeft= "0";
     document.body.style.backgroundColor = "white";
 }
+
 </script>
-
-
 
 </body>
 </html>
