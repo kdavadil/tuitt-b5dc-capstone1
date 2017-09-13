@@ -205,6 +205,10 @@ div {
   margin: 0 auto;
 }
 
+.well p {
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 18px;
+    }
 
 
 @media only screen and (max-width: 600px) 
@@ -334,6 +338,11 @@ div {
     .well img {
       width: 100%;
       margin: 0 auto;
+    }
+
+    .well p {
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 18px;
     }
 
   

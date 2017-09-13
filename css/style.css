@@ -254,7 +254,7 @@ main {
   position: absolute;
   top: 380px;
   margin-bottom: 20px;
- 
+  display: none;
 }
 
 
@@ -290,11 +290,12 @@ main {
 
 .blog h4 {
   font-family: 'Fjalla One', sans-serif;
+  font-size: 25px;
 }
 
 .blog-subtitle,
 .project-subtitle {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .project {
@@ -310,6 +311,7 @@ main {
 
 .project h4 {
   font-family: 'Fjalla One', sans-serif;
+  font-size: 25px;
 }
 
 
@@ -397,6 +399,15 @@ footer .fa {
     footer {
       display: fixed;
     }
+
+
+    .snapshot {
+    position: absolute;
+    top: 380px;
+    margin-bottom: 20px;
+    display: inline;
+    }
+
 
       .acronym {
       display: none; 
