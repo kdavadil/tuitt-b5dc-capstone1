@@ -3,50 +3,23 @@
  
    }
 
-.row-content {
-  color: white;
-}
+.
 
 body {
     font-family: "Lato", sans-serif;
     transition: background-color .5s;
     width: 100%;
     position:relative;
-   /* overflow-y: scroll;*/
+    overflow-y: scroll;
 }
+
+
 
 main {
   display: block;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
-main h2 {
-  text-align: center;
-}
-
-main p {
-  text-align: center;
-}
-
-footer {
-  line-height: 5em;
-  position: relative;
-  bottom: 0;
-  padding: 0;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  background-color: #E8DB7D;
-}
-
-hr {
-  padding: 0;
-  margin-top; 0;
-}
-
-div {
-  margin-top: 1px;
-}
 
 .sidenav {
     height: 100%;
@@ -195,31 +168,140 @@ div {
 
 }
 
-.well {
-  width: 100%;
-  margin: 0 auto;
+.vid-info img {
+  display: none;
+}
+
+.avatar1 {
+  margin: 5px; 
+  display: inline-block;
+  border-radius: 50%;
+  width: 80px;
+}
+
+.snapshot {
+  position: absolute;
+  top: 380px;
   margin-bottom: 20px;
-}
-.well img {
-  width: 50%;
-  margin: 0 auto;
+ 
 }
 
 
+.about {
+  display: inline;
+  top: 100%;
+  position: relative;
+  color: white;
+  margin-top: 50px;
+  text-align: center;
+  
+}
 
-@media only screen and (max-width: 600px) 
+.about h4 {
+  text-align: center;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.about p {
+  display: table;
+  margin-right: 20px;
+}
+
+.blog {
+  display: inline;
+  top: 100%;
+  position: relative;
+  color: white;
+  /*background-color: rgba(0,0,0,.5);*/
+  margin-top: 300px;
+  text-align: center;
+}
+
+.blog h4 {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.blog-subtitle {
+  font-size: 20px;
+}
+
+.project {
+ display: inline;
+  top: 100%;
+  position: relative;
+  color: white;
+  background-color: rgba(0,0,0,.5);
+  margin-top: 50px;
+  text-align: center;
+  
+}
+
+.project h4 {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+
+
+footer {
+  line-height: 1.5em;
+  position: fixed;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  background-color: #E8DB7D;
+  font-size: 15px;
+
+}
+
+footer .fa {
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) 
 {
-  .acronym {
-      display: none;
-    }
+  .video-foreground { 
+    height: 100%;   
+     }
+
 }
+
 
 @media only screen and (min-width: 501px) 
   and (max-width: 767) {
     
     .acronym {
-      display: none;
+     font-size: 15px;
     }
+
+    .video-foreground {
+      height: 300px;
+
+    }
+
+    .video-background {
+      top: -100px;
+
+    }
+
+    .vid-info { 
+        width: 100%; 
+        top: -50%;
+        left:0;
+        /*transform: translate(0,50%);*/
+        padding: .5rem; 
+      }
+
+    .vid-info h1 { 
+      margin-bottom: .2rem;
+      font-size: 60px;
+      }
+
+      .acronym {
+      display: none;
+      }
 
     .social-media-top {
       left:0;
@@ -230,17 +312,15 @@ div {
 
 @media only screen and (max-width: 500px) {
  
-   
+  
     
     main {
-    /*overflow-y: scroll;*/
     display: block;
-    color: white;
-    width: 100%;
+     overflow: auto;
     }
 
-    main h4{
-      text-align: center;
+    footer {
+      display: fixed;
     }
 
       .acronym {
@@ -251,18 +331,15 @@ div {
       display: none;
      } 
 
-     /*#vidtop-content {
-      background-image: url("img/banner.jpg");
-      background-size: contain;
-     }*/
-
+     
     .vid-info {  
-        position: fixed; 
+        position: absolute; 
         width: 100%; 
         padding: .5rem;       
         top: 0%; 
         transform: translate(0,-50);
         background: rgba(0,0,0,0);
+        display: block;
 
       }
 
@@ -271,12 +348,8 @@ div {
       font-size: 55px; 
       }
 
-    .vid-info a { 
-      display: none; 
-      }
-
-    .vid-info p { 
-      display: none; 
+      .vid-info button { 
+      size: 
       }
 
       .info-title {
@@ -313,36 +386,25 @@ div {
       clear: both;
       overflow: auto;
       margin-top: 0;
-      background-color: #008080;
     }
 
     .blog-section {
       display: inline;
     }
 
-    .about-img {
+    .banner-background {
       position: relative;
-      display: block;
-      height: 180px;
+      display: inline;
       z-index: -99;
-      border-radius: 50%;
-      margin: 20px auto;
-      float: none;
-      /*background-color: #008080;*/
+      opacity: .5;
     }
 
-    .well img {
-      width: 100%;
-      margin: 0 auto;
+    .btn-lg {
+   /* padding: 18px 28px;*/
+    font-size: 15px;
+    display: block;
+    margin: 0 auto;
+    /*border-radius: 8px;*/
     }
-
   
-   }
-
-   @media only screen and (max-width: 400px) {
-
-    .social-media-top p{
-      display: none;
-    }
-
    }
