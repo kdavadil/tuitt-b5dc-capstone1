@@ -29,6 +29,10 @@ main {
   width: 80%;
 }
 
+.carousel {
+  margin-bottom: 20px;
+}
+
 main h4 {
   text-align: center;
 }
@@ -37,9 +41,6 @@ main p {
   text-align: center;
 }
 
-/*.carousel-inner {
-  width: 50%;
-}*/
 
 .carousel-inner {
   margin-bottom: 10px;
@@ -56,6 +57,7 @@ main p {
 .carousel-caption {
   left: 0;
   right:0;
+  bottom: 50px;
   color: white;
   background: rgba(0,0,0,.5);
   width: 100%;
@@ -65,38 +67,37 @@ main p {
     width: 20%
 }
 
-  /*.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
-    right: 0;  //or you can increase this
-    margin-right: 0;
-  }
-
-  .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
-    left: 0; //or you can increase this
-  }*/
-
+.carousel-indicators {
+  margin-top: 0;
+  margin-bottom: 30px;
+} 
 
 footer {
- /* vertical-align: middle;*/
-  position: fixed;
+
+  position: absolute;
+  left: 0;
   bottom: 0;
-  padding: 2px;
+  right: -20px;
+  padding: 0;
   width: 100%;
   height: auto;
+  line-height: 5em;
   text-align: center;
-  background-color: #E8DB7D;
-  font-size: 15px;
+  background-color: white;
+  font-size: 10px;
   font-family: 'Baloo Tammudu', cursive;
+  clear:both;
   
 }
 
-footer .fa {
-  display: block;
-  width: 100%;
-  text-align: left;
-  padding: 2px;
-  font-family: 'Baloo Tammudu', cursive;
+footer span {
+  color: black;
 }
 
+.bg-4 { 
+      background-color: white; /* Black Gray */
+      color: black;
+  }
 hr {
   padding: 0;
   margin-top; 0;

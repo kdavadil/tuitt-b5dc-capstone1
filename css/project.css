@@ -37,9 +37,13 @@ main p {
   text-align: center;
 }
 
-/*.carousel-inner {
-  width: 50%;
-}*/
+.thumbnail {
+  margin-bottom: 70px;
+}
+
+.caption {
+  text-align: center;
+}
 
 .carousel-inner {
   margin-bottom: 10px;
@@ -76,14 +80,21 @@ main p {
 
 
 footer {
-  line-height: 5em;
-  position: relative;
+
+  position: absolute;
+  left: 0;
   bottom: 0;
+  right: -20px;
   padding: 0;
   width: 100%;
   height: auto;
+  line-height: 5em;
   text-align: center;
-  background-color: #E8DB7D;
+  background-color: white;
+  font-size: 10px;
+  font-family: 'Baloo Tammudu', cursive;
+  clear:both;
+  
 }
 
 hr {

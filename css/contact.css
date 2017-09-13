@@ -9,6 +9,7 @@ body {
     font-family: "Lato", sans-serif;
     transition: background-color .5s;
     width: 100%;
+    background-color: black;
     position:relative;
     overflow-y: scroll;
 }
@@ -243,26 +244,28 @@ main {
 
 
 footer {
- /* vertical-align: middle;*/
-  position: fixed;
+
+  position: absolute;
+  left: -20px;
   bottom: 0;
-  padding: 2px;
+  right: 0;
+  padding: 0;
   width: 100%;
   height: auto;
+  line-height: 5em;
   text-align: center;
-  background-color: #E8DB7D;
+  background-color: white;
   font-size: 10px;
   font-family: 'Baloo Tammudu', cursive;
+  clear:both;
   
 }
 
-footer .fa {
-  display: block;
-  width: 100%;
-  text-align: left;
-  padding: 2px;
-  font-family: 'Baloo Tammudu', cursive;
-}
+.bg-4 { 
+      background-color: white; /* Black Gray */
+      color: black;
+  }
+
 
 @media only screen and (min-width: 768px) 
 {

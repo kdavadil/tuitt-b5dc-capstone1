@@ -12,7 +12,8 @@ body {
     transition: background-color .5s;
     width: 100%;
     position:relative;
-   /* overflow-y: scroll;*/
+   background-color: black;
+   color: white;
 }
 
 main {
@@ -29,20 +30,30 @@ main p {
 }
 
 footer {
- /* vertical-align: middle;*/
-  position: fixed;
+
+  position: absolute;
+  left: -20px;
   bottom: 0;
-  padding: 2px;
+  right: 0;
+  padding: 0;
   width: 100%;
   height: auto;
+  line-height: 5em;
   text-align: center;
-  background-color: #E8DB7D;
+  background-color: white;
+  color: black;
   font-size: 10px;
   font-family: 'Baloo Tammudu', cursive;
+  clear:both;
   
 }
 
-footer .fa {
+.bg-4 { 
+      background-color: white; /* Black Gray */
+      color: black;
+  }
+
+footer .i {
   display: block;
   width: 100%;
   text-align: left;
@@ -59,7 +70,7 @@ div {
 }
 
 form {
-      margin-bottom: 220px;
+      margin-bottom: 20px;
 }
 
 .sidenav {
@@ -213,6 +224,8 @@ form {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 20px;
+  background-color: black;
+  color: black;
 }
 .well img {
   width: 50%;

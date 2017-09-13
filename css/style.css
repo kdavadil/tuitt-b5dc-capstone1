@@ -78,19 +78,42 @@
 body {
     font-family: "Lato", sans-serif;
     transition: background-color .5s;
+    height: 100%;
     width: 100%;
     position:relative;
     overflow-y: scroll;
+    margin: 0 auto;
 }
 
 
 
 main {
   display: block;
-  overflow-y: scroll;
   margin-bottom: 30px;
 }
 
+footer {
+
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  line-height: 5em;
+  text-align: center;
+  background-color: white;
+  font-size: 10px;
+  font-family: 'Baloo Tammudu', cursive;
+  clear:both;
+  
+}
+
+.bg-4 { 
+      background-color: white; /* Black Gray */
+      color: black;
+  }
 
 .sidenav {
     height: 100%;
@@ -284,9 +307,14 @@ main {
   top: 100%;
   position: relative;
   color: white;
-  /*background-color: rgba(0,0,0,.5);*/
+  background-color: black;
+  border: 0;
   margin-top: 300px;
   text-align: center;
+}
+
+.thumbnail .caption {
+  color: white;
 }
 
 .blog h4 {
@@ -303,10 +331,11 @@ main {
  display: inline;
   top: 100%;
   position: relative;
-  color: white;
-  background-color: rgba(0,0,0,.5);
-  margin-top: 50px;
+   margin-top: 50px;
   text-align: center;
+  color: white;
+  background-color: black;
+  border: 0;
   
 }
 
@@ -315,31 +344,10 @@ main {
   font-size: 25px;
 }
 
-.project-holder {
-  margin-bottom: 150px;
+.caption {
+  margin-bottom: 20px;
 }
 
-footer {
- /* vertical-align: middle;*/
-  position: fixed;
-  bottom: 0;
-  padding: 2px;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  background-color: #E8DB7D;
-  font-size: 10px;
-  font-family: 'Baloo Tammudu', cursive;
-  
-}
-
-footer .fa {
-  display: block;
-  width: 100%;
-  text-align: left;
-  padding: 2px;
-  font-family: 'Baloo Tammudu', cursive;
-}
 
 @media only screen and (min-width: 768px) 
 {
@@ -402,11 +410,10 @@ footer .fa {
     display: block;
      overflow: auto;
     }
-
+/*
     footer {
-/*      position: absolute;*/
       display: fixed;
-    }
+    }*/
 
 
     .snapshot {
