@@ -76,14 +76,25 @@ main p {
 
 
 footer {
-  line-height: 5em;
-  position: relative;
+ /* vertical-align: middle;*/
+  position: fixed;
   bottom: 0;
-  padding: 0;
+  padding: 2px;
   width: 100%;
   height: auto;
   text-align: center;
   background-color: #E8DB7D;
+  font-size: 15px;
+  font-family: 'Baloo Tammudu', cursive;
+  
+}
+
+footer .fa {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 2px;
+  font-family: 'Baloo Tammudu', cursive;
 }
 
 hr {

@@ -88,6 +88,7 @@ body {
 main {
   display: block;
   overflow-y: scroll;
+  margin-bottom: 30px;
 }
 
 
@@ -314,24 +315,30 @@ main {
   font-size: 25px;
 }
 
-
+.project-holder {
+  margin-bottom: 150px;
+}
 
 footer {
-  vertical-align: middle;
+ /* vertical-align: middle;*/
   position: fixed;
   bottom: 0;
-  padding: 0;
+  padding: 2px;
   width: 100%;
-  height: 50px;
+  height: auto;
   text-align: center;
   background-color: #E8DB7D;
   font-size: 10px;
+  font-family: 'Baloo Tammudu', cursive;
   
 }
 
 footer .fa {
-  display: inline;
+  display: block;
   width: 100%;
+  text-align: left;
+  padding: 2px;
+  font-family: 'Baloo Tammudu', cursive;
 }
 
 @media only screen and (min-width: 768px) 
@@ -397,6 +404,7 @@ footer .fa {
     }
 
     footer {
+/*      position: absolute;*/
       display: fixed;
     }
 
