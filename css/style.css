@@ -24,13 +24,12 @@
 
 .bg2 {
     /* The image used */
-    background-image: url("../img/river-2631499.jpg");
+    background-image: url("../img/apple-1873078.jpg");
 
     /* Full height */
     height: 500px; 
 
     /* Center and scale the image nicely */
-      opacity: 0.55;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,6 +38,21 @@
 
 }
 
+.bg3 {
+    /* The image used */
+    background-image: url("../img/strawberries-890382.jpg");
+
+    /* Full height */
+    height: 500px; 
+
+    /* Center and scale the image nicely */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+}
 
 .banner-background {
   background: #000;
@@ -118,9 +132,33 @@ main {
   margin-bottom: 30px;
 }
 
-/*footer*/
+.about {
+  background-color: black;
+  color: white;
+}
 
+.about p {
+  width: 90%;
+  margin-left: 10px;
+}
 
+.about h3 {
+  text-align: center;
+}
+.product {
+  background-color: black;
+  color: white;
+
+}
+
+.product h3 {
+  text-align: center;
+}
+
+.product p {
+  width: 90%;
+  margin-left: 10px;
+}
 /*FOOTER*/
 #myFooter{
    flex: 0 0 auto;
@@ -364,25 +402,6 @@ main {
   display: none;
 }
 
-.about {
-  display: inline;
-  top: 100%;
-  position: relative;
-  color: white;
-  margin-top: 50px;
-  text-align: center;
-  
-}
-
-.about h4 {
-  text-align: center;
-  font-family: 'Fjalla One', sans-serif;
-}
-
-.about p {
-  display: table;
-  margin-right: 20px;
-}
 
 .blog {
   display: inline;
@@ -484,7 +503,21 @@ main {
  
   .bg {
     height: 300px;
+    background-attachment: auto;
+    overflow: auto;
   }
+
+  .bg2 {
+    height: 300px;
+    background-attachment: auto;
+    overflow: auto;
+  }
+
+  .bg3 {
+    height: 300px;
+    background-attachment: auto;
+  }
+    
     
     main {
     display: block;
@@ -552,13 +585,6 @@ main {
     .avatar1 {
       display: inline;
       height: 40%;
-    }
-
-    .about {
-      display: inline;
-      clear: both;
-      overflow: auto;
-      margin-top: 0;
     }
 
     .blog-section {
