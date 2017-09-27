@@ -372,6 +372,80 @@ main {
     line-height: 25px;
 }
 
+/* The Modal (background) */
+.login {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: black; /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal-btn {
+  text-align: center;
+  margin-left: 20px;
+  width: 80%;
+}
+
+/* Full-width input fields */
+.login input[type=text], 
+.login input[type=password] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-transform: none !important;
+    font-family: all;
+}
+
+/* Set a style for all buttons */
+.login button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 55px;
+    top: 25px;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.clearfix {
+  content: "";
+  clear: both;
+  display: table;
+
+}
 
 
 
@@ -381,46 +455,16 @@ main {
     overflow-x: hidden;
     transition: 0.5s;
     margin-bottom: 0;
-    border-radius: 0;
-
-    
+    border-radius: 0;    
 }
 
-.sidenav a {
-
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-}
-
-.toprow-sidenav {
-  margin-top: 20%;
-  margin-left: 20%;
-  height: 20px;
-}
-
-.toprow-sidenav a {
-    padding: 8px 10px 8px 10px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+#errmsg {
+  display: block;
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+  text-transform: none !important;
+  font-family: all;
 }
 
 #topNav {
@@ -597,7 +641,7 @@ main {
 @media only screen and (max-width: 500px) {
  
   .bg {
-    height: 350px;
+    height: 600px;
     background-attachment: scroll;
     overflow: auto;
     padding-left: 0;
@@ -631,6 +675,11 @@ main {
     padding-right: 0;
   }
 
+.login input[type=text], 
+.login input[type=password] {
+    width: 100%;
+}
+
 .about {
       padding-left: 0;
     padding-right: 0;
@@ -660,6 +709,9 @@ main {
   position: absolute; 
   z-index: 999;
   } 
+
+
+
 
     main {
     display: block;
@@ -749,3 +801,4 @@ main {
     }
   
    }
+

@@ -17,28 +17,67 @@
 
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
-<link rel="icon" type="image/png" href="favicon-upstream.ico">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link href="https://fonts.googleapis.com/css?family=Anton|Josefin+Sans" rel="stylesheet"> 
-
-<link href="https://fonts.googleapis.com/css?family=Arvo|Permanent+Marker" rel="stylesheet">
-
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC|Quicksand" rel="stylesheet">
-
-<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 
 <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-<!-- Loading CSS -->
-<link rel="stylesheet" type="text/css" href="css/loading.css"/>
-
 </head>
 <body>
+
+<!-- Modal Login -->
+<div class="login">
+  <span id="close" class="close" title="Close Modal">×</span>
+  <form class="modal-content">
+    <div class="login-box container">
+    <h3>New User Registration</h3>
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" id="email" required>
+      <span id="errmsg"></span>
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="psw" required>
+
+      <label><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" id="psw-repeat" required>
+      <input type="checkbox" checked="checked"> Remember me
+      <span id="errmsg"></span>
+    <div class="modal-btn">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+      <button type="submit" class="btn btn-success signup-btn">Sign Up</button>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+      <button type="button" class="btn btn-danger" id="cancel-btn">Cancel</button>
+    </div>
+    </div>
+    </div>
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    </div>
+  </form>
+</div>
+
+<!-- Modal Subscribe -->
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="panel panel-success modal-content">
+        <div class="panel-heading modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Email Subscription</h4>
+        </div>
+        <div class="modal-body">
+          <span id="modalSpanSubscribe"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <div id="topNav">
@@ -64,14 +103,15 @@
       <li class="active"><a href="contact.html">Contact Us</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a id="signup-link" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
   </div>
   <!-- </div> -->
 </nav> 
-</div>
 
+</div> <!-- end of TopNav -->
+  
 
 
 <div class="bg">
@@ -81,9 +121,9 @@
        
     <form class="form-inline">
     <div class="input-group">
-      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <input type="email" id="subscribeEemail" class="form-control" size="50" placeholder="Email Address" required>
       <div class="input-group-btn">
-        <button type="button" class="btn btn-danger">Subscribe</button>
+        <button type="submit" id="subscribeBtn" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Subscribe</button>
       </div>
     </div>
   </form>
@@ -149,23 +189,19 @@
   <div class="contact col-xs-12 col-xs-push col-sm-6">
   
  <h3>CONTACT US</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  
-
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
   </div>
 </div>
 </div>
 
-
 <!-- footer -->
 
- 
     <footer id="myFooter">
         <div class="container">
             <div class="row">
@@ -213,6 +249,8 @@
     </footer>
 
 
+
+
 <!--  jQUERY CDN -->
 <script
   src="https://code.jquery.com/jquery-1.12.4.min.js"
@@ -238,6 +276,70 @@
       };
       removeLoading();
     </script>
+
+<script>
+
+$("#signup-link").click (function(event) {
+    $(".login").show();
+    $('#email').val("");
+    $('#psw').val("");
+    $('#psw-repeat').val("");
+    $("#errmsg").html("");
+});
+
+$("#close").click (function(event){
+    $(".login").hide();
+
+});
+
+$("#cancel-btn").click (function(event){
+    $(".login").hide();
+
+});
+
+$(".signup-btn").click (function(event){  
+
+  var pw = $('#psw').val();
+  var pwRepeat = $('#psw-repeat').val();
+
+if (pw.length > 8) {
+
+    if (pw == pwRepeat ) {
+      alert("Welcome! New User");
+      $(".login").hide();
+    } else {
+       $("#errmsg").html("Password must match");
+    }
+
+  } else {$("#errmsg").html("Password must be 8 characters long");} 
+
+});
+
+
+$("#subscribeBtn").click (function(event) {
+  var emailSubscribe = $("#subscribeEemail").val();
+/*  emailSubscribe.css("font-weight","bold");*/
+
+  if (emailSubscribe == "") {
+      $("#modalSpanSubscribe").html('Please enter your email address');
+     } else {
+  $("#modalSpanSubscribe").html('Welcome '+emailSubscribe+'! To Upstream.com. You will receive future notifications regarding products and our services. Thanks!');
+  }
+
+
+});
+
+$('#subscribeEemail').on('input', function() {
+  var input=$(this);
+  var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  var is_email=re.test(input.val());
+  if(is_email){input.removeClass("invalid").addClass("valid");}
+  else{input.removeClass("valid").addClass("invalid");}
+});
+
+
+</script>
+
 
 </body>
 </html>

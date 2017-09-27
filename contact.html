@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html class="loading" lang="en"> 
 <head>
 
-<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC" rel="stylesheet">
 
 <meta charset="utf-8"> 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-	<title>Contact - Ken</title>
+  <title>Contact - Upstream</title>
 
 <!-- declare BOOTSTRAP before style.css -->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
 
-<link rel="stylesheet" type="text/css" href="css/contact.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 
-<link rel="icon" type="image/png" href="favicon.ico">
+<link rel="icon" type="image/png" href="favicon-upstream.ico">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -25,7 +25,8 @@
 
 <link href="https://fonts.googleapis.com/css?family=Arvo|Permanent+Marker" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC|Quicksand" rel="stylesheet">
+
 <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 
 <link rel="stylesheet"
@@ -33,52 +34,76 @@
 
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
+<!-- Loading CSS -->
+<link rel="stylesheet" type="text/css" href="css/loading.css"/>
+
 </head>
 <body>
 
 
+<!-- Modal Login -->
+<div class="login">
+  <span id="close" class="close" title="Close Modal">×</span>
+  <form class="modal-content">
+    <div class="login-box container">
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" id="email" required>
+      <span id="errmsg"></span>
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="psw" required>
 
-<!--  Logo  -->
-<div id="topNav" class="container-fluid">
- <div class="row">
-  <div class="col-xs-3 col-md-3">
-    <a href="index.html"><img class="menu-logo img-responsive" src="img/logo1.png"></a>
-  </div>
-
- 
-      <div class="col-xs-6 col-md-5">
-        <div class="social-media-top">
-        <p>KEN DAVADILLA</p>
-        <a href="https://www.facebook.com/Kedzo23" class="fa fa-facebook" target="_blank"></a>
-        <a href="#" class="fa fa-linkedin"></a>
-        <a href="https://github.com/kdavadil" target="_blank" class="fa fa-github"></a></div>
+      <label><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" id="psw-repeat" required>
+      <input type="checkbox" checked="checked"> Remember me
+      <span id="errmsg"></span>
+    <div class="modal-btn">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+      <button type="submit" class="btn btn-success signup-btn">Sign Up</button>
       </div>
-
-  <div class="col-xs-3 col-md-4">
-    <div class="menu-text">
-  <span class="glyphicon glyphicon-menu-hamburger" onclick="openNav()"><!-- &#9776;<span class="acronym"> MENU</span> --></span>
-   </div>
-  </div>
- </div>
+      <div class="col-xs-12 col-sm-6">
+      <button type="button" class="btn btn-danger" id="cancel-btn">Cancel</button>
+    </div>
+    </div>
+    </div>
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    </div>
+  </form>
 </div>
 
-<!--  Side Nav Bar -->
+<!--  Top Nav Bar -->
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<div id="topNav">
+ 
+<nav class="navbar navbar-inverse">
+  <!-- <div class="container-fluid"> -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
 
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="project.html">Projects</a>
-  <a href="blog.html">Blogs</a>
-  <a href="contact.html">Contact</a>
-  <div class="clear"></div>
-  <div class="toprow-sidenav">
-  <a href="https://www.facebook.com/Kedzo23" class="fa fa-facebook" target="_blank"></a>
-  <a href="https://github.com/kdavadil" target="_blank" class="fa fa-linkedin"></a>
-  <a href="https://github.com/kdavadil" target="_blank" class="fa fa-github"></a>
+
+      <a class="navbar-brand" href="#"><img id="header-logo" class="img-responsive" src="img/header-logo.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#product">Products</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li class="active"><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a id="signup-link" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
   </div>
-</div>
+  <!-- </div> -->
+</nav> 
+
+</div> <!-- end of TopNav -->
 
 
 <!-- Banner Header -->
@@ -108,15 +133,55 @@
 </main> <!-- End of Main -->
 
 
-<footer>
-<div class="container-fluid">
-  <div class="row">
-   <div class="col-xs-12 col-md-12">
-  <span>Copyright &copy; 2017 | KEN DAVADILLA</span>
-  </div>
-  </div>
-</div>
-</footer>
+<!-- footer -->
+
+<!-- footer -->
+
+    <footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2 class="logo"><a href="index.html"> UPSTREAM </a></h2>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="#">Company Information</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help desk</a></li>
+                        <li><a href="#">Forums</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <div class="social-networks">
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                        
+                    </div>
+                    <button type="button" class="btn">Contact us</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© UPSTREAM 2017</p>
+        </div>
+    </footer>
 
 
 <!--  jQUERY CDN -->
@@ -131,19 +196,59 @@
 
 <!--  Nav Bar  -->
 <script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.5 )";
-}
+      var html = document.getElementsByTagName('html')[0];
+      var removeLoading = function() {
+        // In a production application you would remove the loading class when your
+        // application is initialized and ready to go.  Here we just artificially wait
+        // 3 seconds before removing the class.
+        setTimeout(function() {
+          html.className = html.className.replace(/loading/, '');
+        }, 3000);
+      };
+      removeLoading();
+    </script>
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    document.body.style.backgroundColor = "white";
-}
+<script>
+
+$("#signup-link").click (function(event) {
+    $(".login").show();
+    $('#email').val("");
+    $('#psw').val("");
+    $('#psw-repeat').val("");
+    $("#errmsg").html("");
+});
+
+$("#close").click (function(event){
+    $(".login").hide();
+
+});
+
+$("#cancel-btn").click (function(event){
+    $(".login").hide();
+
+});
+
+$(".signup-btn").click (function(event){  
+
+  var pw = $('#psw').val();
+  var pwRepeat = $('#psw-repeat').val();
+
+if (pw.length > 8) {
+
+    if (pw == pwRepeat ) {
+      alert("Welcome! New User");
+      $(".login").hide();
+    } else {
+       $("#errmsg").html("Password must match");
+    }
+
+  } else {$("#errmsg").html("Password must be 8 characters long");} 
+
+});
+
+
+
 </script>
-
 
 
 </body>
